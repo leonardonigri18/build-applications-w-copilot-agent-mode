@@ -36,7 +36,7 @@ flowchart LR
     subgraph Codespaces [☁️ GitHub Codespaces]
         subgraph App [🏋️ OctoFit Tracker App]
             Frontend[⚛️ React<br/>Frontend]
-            Backend[🐍 Django<br/>Backend]
+            Backend[🟢 Express<br/>Backend]
             Database[(🍃 MongoDB<br/>Database)]
         end
     end
