@@ -20,9 +20,6 @@ We have a collection of custom agents available in the [nosportugal/.github-priv
 |-------|-------------|
 | [AGENTS.md Generator](https://github.com/nosportugal/.github-private/blob/main/agents/agentsmd-generator.agent.md) | Generates comprehensive AGENTS.md files following the official specification (agents.md) to guide AI coding agents working on your repository |
 | [(Beta) Docs](https://github.com/nosportugal/.github-private/blob/main/agents/docs.agent.md) | Generates comprehensive technical documentation (README, architecture blueprints, workflow analysis, tech stack documentation), following NOS Culture principles |
-| [GitHub Repo Initializer](https://github.com/nosportugal/.github-private/blob/main/agents/github-repo-initializer.agent.md) | Initializes repository with essential dotfiles (.editorconfig, .gitignore, .markdownlint.yml), AGENTS.md, and CODEOWNERS following best practices and NOS Culture principles |
-| [(Beta) React Frontend Expert](https://github.com/nosportugal/.github-private/blob/main/agents/react-frontend-expert.agent.md) | Expert React 19.2 frontend engineer specializing in modern hooks, Server Components, Actions, TypeScript, and performance optimization |
-| [(Beta) MCP Server Expert for Python](https://github.com/nosportugal/.github-private/blob/main/agents/mcp-expert-python.agent.md) | Expert assistant for developing Model Context Protocol (MCP) servers in Python |
 
 #### How to access the agents list
 
@@ -47,7 +44,7 @@ You can also use these agents directly within the GitHub.com UI:
 To use a custom agent:
 
 1. Open the Copilot Chat in VS Code.
-2. Type `@` followed by the agent name (e.g., `@github-repo-initializer`).
+2. Type `@` followed by the agent name (e.g., `@agentsmd-generator`).
 3. Enter your prompt or request.
 
 <img src="https://raw.githubusercontent.com/nosportugal/flai-workshop-github-copilot-800/refs/heads/main/images/agents-selector-vscode.png" alt="VS Code Agent Selector" width=35%>
