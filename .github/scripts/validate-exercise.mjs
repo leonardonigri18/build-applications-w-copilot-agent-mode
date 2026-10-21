@@ -155,7 +155,7 @@ export function validateExercise(root = process.cwd()) {
     }],
     ['README contract', () => {
       const readme = readText(root, 'README.md');
-      assertValid(/template_owner=skills&template_name=build-applications-w-copilot-agent-mode/.test(readme), 'Copy Exercise badge has the wrong template owner or name');
+      assertValid(/template_owner=nosportugal&template_name=flai-workshop-github-copilot-800&/.test(readme), 'Copy Exercise badge has the wrong template owner or name');
       assertValid(/## Welcome/.test(readme) && /Having trouble\? 🤷/.test(readme), 'README must include welcome and troubleshooting sections');
       assertValid(/\.github\/images\/octofit-tracker\.png/.test(readme), 'README must reference the hero image');
     }],
