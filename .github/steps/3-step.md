@@ -2,6 +2,37 @@
 
 Continue on the `build-octofit-app` branch and keep each Copilot request bounded by the tests for this tier.
 
+```mermaid
+%%{init: {'theme': 'neutral', 'themeVariables': { 'primaryColor': '#4a90d9', 'primaryTextColor': '#fff', 'primaryBorderColor': '#2d5a87', 'lineColor': '#5c6bc0', 'secondaryColor': '#81c784', 'tertiaryColor': '#fff3e0'}, 'flowchart': {'nodeSpacing': 50, 'rankSpacing': 80, 'padding': 40}}}%%
+flowchart LR
+    User((👤 User))
+    
+    subgraph Codespaces [☁️ GitHub Codespaces]
+        subgraph App [🏋️ OctoFit Tracker App]
+            Frontend[⚛️ React<br/>Frontend]
+            Backend[🟢 Express<br/>Backend]
+            Database[(🍃 MongoDB<br/>Database)]
+        end
+    end
+    
+    User --> Frontend
+    Frontend <--> Backend
+    Backend <--> Database
+    
+    style User stroke-width:2px,fill:#e3f2fd40,color:#00000050,stroke:#1976d250,stroke-dasharray: 5 5
+    style Frontend stroke-width:2px,fill:#b3e5fc40,color:#00000050,stroke:#0288d150,stroke-dasharray: 5 5
+    style Backend stroke-width:4px,fill:#c8e6c9,color:#000,stroke:#2e7d32
+    style Database stroke-width:2px,fill:#ffe0b240,color:#00000050,stroke:#ef6c0050,stroke-dasharray: 5 5
+    style Codespaces stroke-width:3px
+    style App stroke-width:3px,stroke:#ff6b35
+    
+    linkStyle 0 stroke-width:2px,stroke:#cccccc
+    linkStyle 1 stroke-width:3px
+    linkStyle 2 stroke-width:2px,stroke:#cccccc
+```
+
+> **🎯 Current Focus:** In this step, we're implementing the **Express Backend**: the API behavior that the React frontend calls.
+
 ### 📖 Theory: APIs encode behavior, not just routes
 
 The logic tier owns request validation, business rules, status codes, and error responses. Supertest contract tests make those decisions observable without requiring a browser and prevent an endpoint from passing merely because its route string exists. Implement one capability at a time and use test output to refine Copilot's changes.
