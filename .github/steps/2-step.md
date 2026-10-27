@@ -2,37 +2,6 @@
 
 Continue on the `build-octofit-app` branch and keep each Copilot request bounded by the tests for this tier.
 
-```mermaid
-%%{init: {'theme': 'neutral', 'themeVariables': { 'primaryColor': '#4a90d9', 'primaryTextColor': '#fff', 'primaryBorderColor': '#2d5a87', 'lineColor': '#5c6bc0', 'secondaryColor': '#81c784', 'tertiaryColor': '#fff3e0'}, 'flowchart': {'nodeSpacing': 50, 'rankSpacing': 80, 'padding': 40}}}%%
-flowchart LR
-    User((👤 User))
-    
-    subgraph Codespaces [☁️ GitHub Codespaces]
-        subgraph App [🏋️ OctoFit Tracker App]
-            Frontend[⚛️ React<br/>Frontend]
-            Backend[🟢 Express<br/>Backend]
-            Database[(🍃 MongoDB<br/>Database)]
-        end
-    end
-    
-    User --> Frontend
-    Frontend <--> Backend
-    Backend <--> Database
-    
-    style User stroke-width:2px,fill:#e3f2fd40,color:#00000050,stroke:#1976d250,stroke-dasharray: 5 5
-    style Frontend stroke-width:2px,fill:#b3e5fc40,color:#00000050,stroke:#0288d150,stroke-dasharray: 5 5
-    style Backend stroke-width:2px,fill:#c8e6c940,color:#00000050,stroke:#2e7d3250,stroke-dasharray: 5 5
-    style Database stroke-width:4px,fill:#ffe0b2,color:#000,stroke:#ef6c00
-    style Codespaces stroke-width:3px
-    style App stroke-width:3px,stroke:#ff6b35
-    
-    linkStyle 0 stroke-width:2px,stroke:#cccccc
-    linkStyle 1 stroke-width:2px,stroke:#cccccc
-    linkStyle 2 stroke-width:3px
-```
-
-> **🎯 Current Focus:** In this step, we're implementing the **MongoDB data tier**: Mongoose models and repeatable seed data.
-
 ### 📖 Theory: Model invariants and representative data
 
 Mongoose schemas should express the rules the rest of the application can rely on, not merely mirror arbitrary JSON. Relationships and validation for activities, teams, leaderboard inputs, and workout suggestions make downstream API behavior predictable. Focused model tests and representative seed data expose schema mistakes before they become HTTP or UI bugs.
